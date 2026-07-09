@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KANAN Galaxy</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<nav class="navbar">
+
+<h2>🚀 KANAN</h2>
+
+<div class="nav-links">
+
+<a href="index.html">
+🏠 خانه
+</a>
+
+<a href="login.html">
+👤 پنل کاربر
+</a>
+
+<a href="payment.html">
+💳 خرید
+</a>
+
+<a href="index.html#plans">
+💎 پلن‌ها
+</a>
+
+</div>
+
+</nav>
+<div id="loader">
+
+<h1>🚀 KANAN</h1>
+<p>کنعان گلکسی</p>
+
+</div>
+<header>
+
+<h1>🚀 KANAN</h1>
+
+<h2>کنعان گلکسی</h2>
+
+<p>
+کانفینگ فضایی | اینترنت سریع و قدرتمند
+</p>
+
+</header>
+<section class="timer">
+
+<h2>🔥 جشنواره بزرگ KANAN Galaxy</h2>
+
+<p>⏳ پایان تخفیف ویژه:</p>
+
+<h3 id="countdown">
+15 روز | 00 ساعت | 00 دقیقه | 00 ثانیه
+</h3>
+
+</section>
+<section class="calculator">
+
+<h2>🧮 ماشین حساب کانفیگ آزاد</h2>
+
+<p>حجم مورد نظر را انتخاب کنید:</p>
+
+<input 
+type="number" 
+id="gb" 
+min="1" 
+max="100" 
+value="1"
+oninput="calculatePrice()">
+
+
+<p>
+حجم:
+<span id="showGB">1</span> گیگ
+</p>
+
+
+<h3>
+قیمت:
+<span id="price">4000</span> تومان
+</h3>
+
+
+<button onclick="createOrder('کانفیگ آزاد')">
+خرید کانفیگ
+</button>
+
+<section class="apps">
+
+<h2>🚀 انتخاب نوع مصرف KANAN</h2>
+
+<div class="app-container">
+
+<div class="app-box">
+<h3>🎮 Gaming</h3>
+<p>مناسب برای:</p>
+<p>
+🎯 PUBG Mobile<br>
+🔥 Call Of Duty<br>
+⚡ Free Fire<br>
+🎮 Valorant
+</p>
+</div>
+
+
+<div class="app-box">
+<h3>📱 Social</h3>
+<p>مناسب برای:</p>
+<p>
+📸 Instagram<br>
+🎵 TikTok<br>
+▶️ YouTube<br>
+💬 Telegram
+</p>
+</div>
+
+
+<div class="app-box">
+<h3>🌌 آزاد</h3>
+<p>انتخاب با شما:</p>
+<p>
+1 تا 100 گیگ<br>
+⚡ گیم<br>
+📱 شبکه اجتماعی<br>
+🎬 ویدیو
+</p>
+</div>
+
+
+</div>
+
+</section>
+<section class="apps">
+
+...
+کد بخش بازی‌ها و اینستا و یوتیوب
+...
+
+</section>
+
+
+<!-- اینجا کد اپراتورها را قرار بده -->
+
+
+<section class="operators">
+
+<h2>🌐 انتخاب اپراتور و سرور KANAN</h2>
+
+<div class="operator-container">
+
+<div class="operator-card">
+<h3>📱 همراه اول</h3>
+<p>سرور پیشنهادی:</p>
+<p>🇩🇪 Germany Server</p>
+<p>⚡ پینگ پایدار</p>
+<button onclick="selectOperator('همراه اول','آلمان')">
+انتخاب
+</button>
+</div>
+
+<div class="operator-card">
+<h3>📱 ایرانسل</h3>
+<p>سرور پیشنهادی:</p>
+<p>🇫🇮 Finland Server</p>
+<p>🚀 سرعت بالا</p>
+<button onclick="selectOperator('ایرانسل','فنلاند')">
+انتخاب
+</button>
+</div>
+
+<div class="operator-card">
+<h3>📱 رایتل</h3>
+<p>سرور پیشنهادی:</p>
+<p>🇳🇱 Netherlands Server</p>
+<p>🌌 اتصال قدرتمند</p>
+<button onclick="selectOperator('رایتل','هلند')">
+انتخاب
+</button>
+</div>
+
+<div class="operator-card">
+<h3>🌍 همه اپراتورها</h3>
+<p>سرور هوشمند</p>
+<p>🤖 Auto Select</p>
+<p>🔥 بهترین مسیر</p>
+<button onclick="selectOperator('همه اپراتورها','Auto Server')">
+انتخاب
+</button>
+</div>
+
+</div>
+
+</section>
+<!-- بخش سرور -->
+
+<section class="server-map">
+
+<h2>🌍 انتخاب سرور فضایی KANAN</h2>
+
+<div class="earth">
+🌍
+</div>
+
+<div class="server-buttons">
+
+<button onclick="selectServer('آلمان 🇩🇪')">
+🇩🇪 آلمان
+</button>
+
+<button onclick="selectServer('فنلاند 🇫🇮')">
+🇫🇮 فنلاند
+</button>
+
+<button onclick="selectServer('هلند 🇳🇱')">
+🇳🇱 هلند
+</button>
+
+<button onclick="selectServer('ترکیه 🇹🇷')">
+🇹🇷 ترکیه
+</button>
+
+</div>
+
+</section>
+<section class="server-map">
+
+<h2>🌍 انتخاب سرور فضایی KANAN</h2>
+
+<div class="black-earth">
+
+<div class="server-point germany" onclick="selectServer('آلمان 🇩🇪','گیم و پینگ کم','150000')">
+<div class="server-info">
+🇩🇪 آلمان
+<br>
+🎮 مناسب گیم
+<br>
+50 گیگ
+<br>
+150,000 تومان
+</div>
+</div>
+
+
+<div class="server-point finland" onclick="selectServer('فنلاند 🇫🇮','اکسپلور و شبکه اجتماعی','80000')">
+<div class="server-info">
+🇫🇮 فنلاند
+<br>
+📱 مناسب اکسپلور
+<br>
+50 گیگ
+<br>
+80,000 تومان
+</div>
+</div>
+
+
+<div class="server-point netherlands" onclick="selectServer('هلند 🇳🇱','فیلم و دانلود','120000')">
+<div class="server-info">
+🇳🇱 هلند
+<br>
+🎬 فیلم و دانلود
+<br>
+50 گیگ
+<br>
+120,000 تومان
+</div>
+</div>
+
+
+<div class="server-point turkey" onclick="selectServer('ترکیه 🇹🇷','استفاده روزانه','50000')">
+<div class="server-info">
+🇹🇷 ترکیه
+<br>
+⚡ همه کاره
+<br>
+50 گیگ
+<br>
+50,000 تومان
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="plans">
+
+<section class="plans">
+</section>
+<section class="plans">
+
+<section class="plans">
+
+<div class="box">
+<h2>🌌 کانفیگ آزاد</h2>
+<p>انتخاب حجم ۱ تا ۱۰۰ گیگ</p>
+<p>هر گیگ: ۴,۰۰۰ تومان</p>
+<button>خرید</button>
+</div>
+
+<div class="box">
+<h2>🚀 پلن 20 گیگ</h2>
+
+<p class="old">80,000 تومان</p>
+<p>50,000 تومان 🔥 38٪ تخفیف</p>
+
+<button>خرید</button>
+</div>
+
+<div class="box">
+<h2>🔥 پلن 40 گیگ</h2>
+
+<p class="old">160,000 تومان</p>
+<p>100,000 تومان 🔥 37٪ تخفیف</p>
+
+<button>خرید</button>
+</div>
+
+<div class="box">
+<h2>♾️ نامحدود ۱ ماهه</h2>
+
+<p class="old">1,000,000 تومان</p>
+<p>250,000 تومان 🔥 75٪ تخفیف</p>
+
+<button>خرید</button>
+</div>
+
+<div class="box">
+<h2>👑 پلن ۲ ماهه ویژه</h2>
+
+<p class="old">2,000,000 تومان</p>
+<p>500,000 تومان 🔥 75٪ تخفیف</p>
+
+<button>خرید</button>
+</div>
+
+</section>
+
+</section>
+
+
+<section class="payment">
+
+<h2>🏦 کارت به کارت</h2>
+
+<div class="card">
+
+<img
+src="trading-room.png"
+alt="KANAN Trading Room"
+style="
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px #00ff88;
+">
+
+<h3 style="margin-top:15px;color:#00ff88;">
+👤 سجاد مقدسی
+</h3>
+
+<p style="direction:ltr;text-align:center;font-size:20px;">
+6219 8618 6206 4499
+</p>
+
+</div>
+
+<button>
+📋 کپی شماره کارت
+</button>
+<section class="customer">
+
+<h2>👤 ورود به باشگاه مشتریان</h2>
+
+<input id="phone" type="text" placeholder="شماره موبایل">
+
+<button onclick="savePhone()">
+ثبت شماره
+</button>
+
+
+<div id="userInfo"></div>
+
+</section>
+</section>
+<section class="club">
+
+<h2>🎁 باشگاه مشتریان KANAN</h2>
+
+<div class="club-box">
+
+<h3>👤 سطح کاربر</h3>
+
+<p>🥉 برنزی</p>
+
+<p>⭐ امتیاز شما: 250</p>
+
+
+<h3>🎯 پیشرفت جایزه</h3>
+
+<div class="progress">
+<div class="progress-bar">
+20%
+</div>
+</div>
+
+
+<p>
+هر 50,000 تومان خرید = 20٪ پیشرفت
+</p>
+
+<p>
+🎁 در 100٪ دریافت 20 گیگ رایگان
+</p>
+
+</div>
+
+
+<div class="club-box">
+
+<h3>🏆 رتبه‌ها</h3>
+
+<p>🥉 برنزی</p>
+<p>🥈 نقره‌ای</p>
+<p>🥇 طلایی</p>
+<p>💎 الماسی</p>
+<p>👑 فرمانده فضایی</p>
+
+</div>
+
+
+</section>
+
+
+<section class="support">
+
+<h2>🛠️ پشتیبانی KANAN</h2>
+
+<p>
+🟦 Telegram: @kanan1111
+</p>
+
+<p>
+🟢 Bale: @kanan1
+</p>
+
+<p>
+🟣 Shad: @csqmsj9134
+</p>
+
+</section>
+
+
+
+<footer>
+
+<p>
+© KANAN Galaxy 🚀
+</p>
+
+</footer>
+let plan =
+localStorage.getItem("selectedPlan");
+
+let operator =
+localStorage.getItem("operator");
+
+let server =
+localStorage.getItem("server");
+
+
+document.getElementById("plan").innerHTML =
+plan || "انتخاب نشده";
+
+
+document.getElementById("operator").innerHTML =
+operator || "انتخاب نشده";
+
+
+document.getElementById("server").innerHTML =
+server || "انتخاب نشده";
+<script src="script.js"></script>
+</body>
+
+</html>
