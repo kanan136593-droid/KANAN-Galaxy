@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>KANAN Leader Panel</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+<nav class="navbar">
+
+<h2>🚀 KANAN</h2>
+
+<div class="nav-links">
+
+<a href="index.html">
+🏠 خانه
+</a>
+
+<a href="login.html">
+👤 پنل کاربر
+</a>
+
+<a href="payment.html">
+💳 خرید
+</a>
+
+<a href="index.html#plans">
+💎 پلن‌ها
+</a>
+
+</div>
+
+</nav>
+
+<header>
+
+<h1>🔐 پنل لیدر KANAN</h1>
+
+</header>
+
+
+
+<section class="leader">
+
+
+<h2>ورود لیدر</h2>
+
+
+<input id="pass" type="password" placeholder="رمز لیدر">
+
+
+<button onclick="login()">
+ورود
+</button>
+
+
+
+<div id="panel" style="display:none;">
+
+
+<h2>🚀 مدیریت KANAN</h2>
+
+
+<div class="box">
+
+<p>👥 تعداد کاربران: 0</p>
+
+<p>🛒 سفارش‌ها: 0</p>
+
+<p>⭐ امتیازها: 0</p>
+
+<p>🏆 رتبه‌بندی کاربران</p>
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+<script>
+
+function login(){
+
+let password = document.getElementById("pass").value;
+
+
+if(password === "kanan139300"){
+
+document.getElementById("panel").style.display="block";
+
+alert("✅ ورود موفق");
+
+}
+
+else{
+
+alert("❌ رمز اشتباه است");
+
+}
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
