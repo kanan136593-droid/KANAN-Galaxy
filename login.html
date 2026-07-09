@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ورود KANAN</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+<h2>🚀 KANAN</h2>
+
+</nav>
+
+
+<section class="club-box">
+
+<h1>🌌 ورود به KANAN</h1>
+
+<p>شماره موبایل خود را وارد کنید</p>
+
+
+<input id="loginPhone" type="text" placeholder="09123456789">
+
+
+<br><br>
+
+
+<button onclick="loginUser()">
+
+ورود به پنل
+
+</button>
+
+
+</section>
+
+
+
+<script>
+
+function loginUser(){
+
+let phone =
+document.getElementById("loginPhone").value;
+
+
+if(phone.length < 10){
+
+alert("❌ شماره صحیح نیست");
+
+return;
+
+}
+
+
+localStorage.setItem(
+"phone",
+phone
+);
+
+
+window.location.href="user.html";
+
+
+}
+
+</script>
+
+
+</body>
+
+</html>
